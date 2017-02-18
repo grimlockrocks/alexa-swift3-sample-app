@@ -5,6 +5,7 @@ Features:
 * Login with Amazon, using scope alexa:all
 * [Alexa Voice Service (AVS) v20160207 API with HTTP/2](https://developer.amazon.com/public/solutions/alexa/alexa-voice-service/content/avs-api-overview)
 * Swift 3 implementation
+* TODO: Downchannel
 
 Instructions:
 * Check-out the code, modify Bundle Identifier to something you like.
@@ -22,6 +23,7 @@ Demo 1 - Weather
 * Wait for Alexa's response.
 
 Demo 2 - Timer (Downchannel) 
+* TODO
 
 Special thanks to [AVSExample-Swift](https://github.com/carsonmcdonald/AVSExample-Swift), which I re-used & modified the code that parses the audio attachment from AVS's response. 
 
