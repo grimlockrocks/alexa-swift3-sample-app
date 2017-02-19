@@ -1,5 +1,5 @@
 # alexa-swift3-sample-app
-A sample iOS/Swift3 app that brings Alexa Voice Service on your phone. 
+A sample iOS/Swift3 app that brings Alexa Voice Service to your phone. 
 
 Features:
 * Login with Amazon, using scope alexa:all
@@ -33,3 +33,5 @@ Demo 3 - Timer (Downchannel)
 * Wait for 10 seconds, then you will see "Time is up!".
 
 See the official AVS GitHub [here](https://github.com/alexa/alexa-avs-sample-app).
+
+Next step: add [wake word detection](https://github.com/grimlockrocks/kitt-snowboy-swift3-sample-app).
