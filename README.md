@@ -20,7 +20,7 @@ Demo 1 - Ping
 * Run the app.
 * Click "Ping", then you will see "Ping Success!".
 
-Demo 2 - Weather
+Demo 2 - Weather (or any question)
 * Run the app.
 * Click "Push to Talk", then speak: "What's the weather?".
 * Click the button again to stop recording.
