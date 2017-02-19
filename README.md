@@ -4,8 +4,8 @@ A sample iOS/Swift3 app that brings Alexa Voice Service on your phone.
 Features:
 * Login with Amazon, using scope alexa:all
 * [Alexa Voice Service (AVS) v20160207 API with HTTP/2](https://developer.amazon.com/public/solutions/alexa/alexa-voice-service/content/avs-api-overview)
+* Downchannel implementation on Timer (only SetAlert)
 * Swift 3 implementation
-* TODO: Downchannel
 
 Instructions:
 * Check-out the code, modify Bundle Identifier to something you like.
@@ -16,13 +16,20 @@ Instructions:
 * Modify the entries under "info.plist" -> URL types, replace URL Schemes -> Item 0 and URL identifier with your Bundle Identifier.
 * To change parameters such as [ASR Profile](https://developer.amazon.com/public/solutions/alexa/alexa-voice-service/reference/speechrecognizer#profiles), modify the value of AUDIO_EVENT_DATA under "AlexaVoiceServiceClient.swift".
 
-Demo 1 - Weather
+Demo 1 - Ping
+* Run the app.
+* Click "Ping", then you will see "Ping Success!".
+
+Demo 2 - Weather
 * Run the app.
 * Click "Push to Talk", then speak: "What's the weather?".
 * Click the button again to stop recording.
 * Wait for Alexa's response.
 
-Demo 2 - Timer (Downchannel) 
-* TODO
+Demo 3 - Timer (Downchannel) 
+* Run the app.
+* Click "Start Downchannel & Synchronize State, wait for "Sync Success!".
+* Click "Push to Talk", then speak: "Set a timer for 10 seconds".
+* Wait for 10 seconds, then you will see "Time is up!".
 
 See the official AVS GitHub [here](https://github.com/alexa/alexa-avs-sample-app).
