@@ -25,6 +25,4 @@ Demo 1 - Weather
 Demo 2 - Timer (Downchannel) 
 * TODO
 
-Special thanks to [AVSExample-Swift](https://github.com/carsonmcdonald/AVSExample-Swift), which I re-used & modified the code that parses the audio attachment from AVS's response. 
-
 See the official AVS GitHub [here](https://github.com/alexa/alexa-avs-sample-app).
