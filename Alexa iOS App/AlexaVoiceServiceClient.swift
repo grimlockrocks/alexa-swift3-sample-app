@@ -118,7 +118,7 @@ class AlexaVoiceServiceClient : NSObject, URLSessionDelegate, URLSessionDataDele
                 let res = response as! HTTPURLResponse
                 print("Sync status code: \(res.statusCode)")
                 if (res.statusCode != 204) {
-                    let resJsonData = try! JSONSerialization.jsonObject(with: data!, options: [])
+                    let resJsonData = try! JSONSerialization.jsonObject(with: data!, options: [.allowFragments])
                     print("Sync response: \(resJsonData)")
                     self.syncHandler?(false)
                 } else {
