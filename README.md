@@ -1,11 +1,14 @@
 # alexa-swift3-sample-app
 A sample iOS/Swift3 app that brings Alexa Voice Service to your phone. 
 
+Disclaimer: This repository is not affiliated with, maintained, authorized, endorsed or sponsored by Amazon or any of its affiliates. Please use it as an example to learn Alexa Voice Service. Please refer to the official instructions from the [website](https://developer.amazon.com/alexa-voice-service). 
+
 Features:
 * Login with Amazon, using scope alexa:all
 * [Alexa Voice Service (AVS) v20160207 API with HTTP/2](https://developer.amazon.com/public/solutions/alexa/alexa-voice-service/content/avs-api-overview)
 * Downchannel implementation on Timer (only SetAlert)
 * Swift 3 implementation
+* [Snowboy](https://github.com/grimlockrocks/kitt-snowboy-swift3-sample-app) wake word
 
 Instructions:
 * Check-out the code, modify Bundle Identifier to something you like.
@@ -32,6 +35,11 @@ Demo 3 - Timer (Downchannel)
 * Click "Push to Talk", then speak: "Set a timer for 10 seconds".
 * Wait for 10 seconds, then you will see "Time is up!".
 
-See the official AVS GitHub [here](https://github.com/alexa/alexa-avs-sample-app).
+Demo 4 - Wake Word "Alexa"
+* Run the app.
+* Click "Start Wake Word".
+* Say "Alexa", once the wake word is succesfully detected, you will see "Alexa is listening". Then say "What day is it today?".
+* You will see "Waiting for Alexa to respond...". 
+* Finetune the values in Settings.swift, namely: SENSITIVITY for wake word detection; SILENCE_THRESHOLD for when to stop recording and send the audio to Alexa. 
 
-Next step: add [wake word detection](https://github.com/grimlockrocks/kitt-snowboy-swift3-sample-app).
+See the official AVS GitHub [here](https://github.com/alexa/alexa-avs-sample-app).
