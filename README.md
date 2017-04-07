@@ -1,7 +1,7 @@
 # alexa-swift3-sample-app
 A sample iOS/Swift3 app that brings Alexa Voice Service to your phone. 
 
-Disclaimer: This repository is not affiliated with, maintained, authorized, endorsed or sponsored by Amazon or any of its affiliates. Please use it as an example to learn Alexa Voice Service. Please refer to the official instructions from the [website](https://developer.amazon.com/alexa-voice-service). 
+Disclaimer: This repository is not affiliated with, maintained, authorized, endorsed or sponsored by Amazon or any of its affiliates. Please use it as an example to learn Alexa Voice Service. The code is not production level, rather, a prototype that demonstrates the capability of Alexa. Please refer to the official instructions from the [website](https://developer.amazon.com/alexa-voice-service). 
 
 Features:
 * Login with Amazon, using scope alexa:all
@@ -9,6 +9,7 @@ Features:
 * Downchannel implementation on Timer (only SetAlert)
 * Swift 3 implementation
 * [Snowboy](https://github.com/grimlockrocks/kitt-snowboy-swift3-sample-app) wake word
+* Bluetooth audio input/output
 
 Instructions:
 * Check-out the code, modify Bundle Identifier to something you like.
