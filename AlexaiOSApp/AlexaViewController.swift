@@ -171,6 +171,7 @@ class AlexaViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecor
                 do {
                     self.avsClient.sendEvent(namespace: "SpeechSynthesizer", name: "SpeechStarted", token: self.speakToken!)
                     
+                    try audioSession.setCategory(AVAudioSessionCategoryPlayAndRecord, with:[AVAudioSessionCategoryOptions.allowBluetooth, AVAudioSessionCategoryOptions.allowBluetoothA2DP])
                     try self.audioPlayer = AVAudioPlayer(data: directive.data)
                     self.audioPlayer.delegate = self
                     self.audioPlayer.prepareToPlay()
