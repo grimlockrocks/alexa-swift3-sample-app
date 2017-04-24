@@ -9,7 +9,7 @@ Features:
 * Downchannel implementation on Timer (only SetAlert)
 * Swift 3 implementation
 * [Snowboy](https://github.com/grimlockrocks/kitt-snowboy-swift3-sample-app) wake word
-* Bluetooth audio input/output
+* Bluetooth audio input/output through hands-free profile
 
 Instructions:
 * Check-out the code, modify Bundle Identifier to something you like.
@@ -42,5 +42,6 @@ Demo 4 - Wake Word "Alexa"
 * Say "Alexa", once the wake word is succesfully detected, you will see "Alexa is listening". Then say "What day is it today?".
 * You will see "Waiting for Alexa to respond...". 
 * Finetune the values in Settings.swift, namely: SENSITIVITY for wake word detection; SILENCE_THRESHOLD for when to stop recording and send the audio to Alexa. 
+* There are several improvements you can do to improve wake word accuracy, e.g. audio buffer size. This demo is more or less a proof of concept. 
 
 See the official AVS GitHub [here](https://github.com/alexa/alexa-avs-sample-app).
