@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -24,7 +24,6 @@
 		046AD23B1E95E2690093749A /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 046AD23A1E95E2690093749A /* Accelerate.framework */; };
 		046AD23E1E9686A10093749A /* alexa_02092017.umdl in Resources */ = {isa = PBXBuildFile; fileRef = 046AD23C1E9686A10093749A /* alexa_02092017.umdl */; };
 		046AD23F1E9686A10093749A /* common.res in Resources */ = {isa = PBXBuildFile; fileRef = 046AD23D1E9686A10093749A /* common.res */; };
-		049EB6791E972B47001275A6 /* AlexaiOSAppTests in Resources */ = {isa = PBXBuildFile; fileRef = 049EB6781E972B47001275A6 /* AlexaiOSAppTests */; };
 		04A2017E1E5A2ECA00197FE3 /* LoginWithAmazon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A2017D1E5A2ECA00197FE3 /* LoginWithAmazon.framework */; };
 		04A201801E5A2F1E00197FE3 /* LoginWithAmazonToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A2017F1E5A2F1E00197FE3 /* LoginWithAmazonToken.swift */; };
 		04AD929C1E58B012001B1BEB /* AlexaVoiceServiceClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AD929B1E58B012001B1BEB /* AlexaVoiceServiceClient.swift */; };
@@ -54,7 +53,6 @@
 		046AD23A1E95E2690093749A /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		046AD23C1E9686A10093749A /* alexa_02092017.umdl */ = {isa = PBXFileReference; lastKnownFileType = file; path = alexa_02092017.umdl; sourceTree = "<group>"; };
 		046AD23D1E9686A10093749A /* common.res */ = {isa = PBXFileReference; lastKnownFileType = file; path = common.res; sourceTree = "<group>"; };
-		049EB6781E972B47001275A6 /* AlexaiOSAppTests */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AlexaiOSAppTests; sourceTree = "<group>"; };
 		04A2017D1E5A2ECA00197FE3 /* LoginWithAmazon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LoginWithAmazon.framework; path = Frameworks/LoginWithAmazon.framework; sourceTree = "<group>"; };
 		04A2017F1E5A2F1E00197FE3 /* LoginWithAmazonToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginWithAmazonToken.swift; sourceTree = "<group>"; };
 		04AD929B1E58B012001B1BEB /* AlexaVoiceServiceClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlexaVoiceServiceClient.swift; sourceTree = "<group>"; };
@@ -119,7 +117,6 @@
 		045773D81E4FB33D00A5F558 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				049EB6781E972B47001275A6 /* AlexaiOSAppTests */,
 				046AD23A1E95E2690093749A /* Accelerate.framework */,
 				046AD2381E95E06E0093749A /* libsnowboy-detect.a */,
 				04A2017D1E5A2ECA00197FE3 /* LoginWithAmazon.framework */,
@@ -177,17 +174,17 @@
 				TargetAttributes = {
 					045773A31E4FB25900A5F558 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = QSHVJUAEF5;
 						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
 			buildConfigurationList = 0457739F1E4FB25900A5F558 /* Build configuration list for PBXProject "AlexaiOSApp" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -210,7 +207,6 @@
 				045773B21E4FB25900A5F558 /* Assets.xcassets in Resources */,
 				046AD23E1E9686A10093749A /* alexa_02092017.umdl in Resources */,
 				045773AD1E4FB25900A5F558 /* Main.storyboard in Resources */,
-				049EB6791E972B47001275A6 /* AlexaiOSAppTests in Resources */,
 				046AD23F1E9686A10093749A /* common.res in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,8 +336,10 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -355,7 +353,7 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = QSHVJUAEF5;
+				DEVELOPMENT_TEAM = 3755CX5U87;
 				ENABLE_BITCODE = NO;
 				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.framework *.gch *.xcode* *.xcassets (*) .DS_Store CVS .svn .git .hg *.pbproj *.pbxproj";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -370,7 +368,10 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = AlexaiOSApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -378,13 +379,13 @@
 					"$(PROJECT_DIR)/../",
 					"$(PROJECT_DIR)/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = bisheng.AlexaiOSApp;
+				PRODUCT_BUNDLE_IDENTIFIER = mymanu.demoalexa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;
 				SWIFT_INCLUDE_PATHS = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "AlexaiOSApp/AlexaiOSApp-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)";
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -400,8 +401,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = QSHVJUAEF5;
+				DEVELOPMENT_TEAM = 3755CX5U87;
 				ENABLE_BITCODE = NO;
+				EXCLUDED_ARCHS = "";
 				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.framework *.gch *.xcode* *.xcassets (*) .DS_Store CVS .svn .git .hg *.pbproj *.pbxproj";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -415,7 +417,10 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = AlexaiOSApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -423,12 +428,12 @@
 					"$(PROJECT_DIR)/../",
 					"$(PROJECT_DIR)/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = bisheng.AlexaiOSApp;
+				PRODUCT_BUNDLE_IDENTIFIER = mymanu.demoalexa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;
 				SWIFT_INCLUDE_PATHS = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "AlexaiOSApp/AlexaiOSApp-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)";
 				VALID_ARCHS = "armv7 armv7s arm64";

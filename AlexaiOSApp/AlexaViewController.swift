@@ -119,7 +119,7 @@ class AlexaViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecor
         }
     }
     
-    func startListening() {
+    @objc func startListening() {
         
         audioRecorder.record(forDuration: 1.0)
     }
@@ -172,6 +172,11 @@ class AlexaViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecor
                     self.avsClient.sendEvent(namespace: "SpeechSynthesizer", name: "SpeechStarted", token: self.speakToken!)
                     
                     try audioSession.setCategory(AVAudioSessionCategoryPlayAndRecord, with:[AVAudioSessionCategoryOptions.allowBluetooth, AVAudioSessionCategoryOptions.allowBluetoothA2DP])
+                    do {
+                        try audioSession.overrideOutputAudioPort(AVAudioSessionPortOverride.speaker)
+                    } catch let error as NSError {
+                        print("audioSession error: \(error.localizedDescription)")
+                    }
                     try self.audioPlayer = AVAudioPlayer(data: directive.data)
                     self.audioPlayer.delegate = self
                     self.audioPlayer.prepareToPlay()
@@ -217,7 +222,7 @@ class AlexaViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecor
         }
     }
     
-    func timerStart() {
+    @objc func timerStart() {
         print("Timer is triggered")
         DispatchQueue.main.async { () -> Void in
             self.infoLabel.text = "Time is up!"
@@ -228,11 +233,11 @@ class AlexaViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecor
         
         let file = try! AVAudioFile(forReading: snowboyTempSoundFileURL)
         let format = AVAudioFormat(commonFormat: .pcmFormatFloat32, sampleRate: 16000.0, channels: 1, interleaved: false)
-        let buffer = AVAudioPCMBuffer(pcmFormat: format, frameCapacity: AVAudioFrameCount(file.length))
-        try! file.read(into: buffer)
-        let array = Array(UnsafeBufferPointer(start: buffer.floatChannelData![0], count:Int(buffer.frameLength)))
+        let buffer = AVAudioPCMBuffer(pcmFormat: format!, frameCapacity: AVAudioFrameCount(file.length))
+        try! file.read(into: buffer!)
+        let array = Array(UnsafeBufferPointer(start: buffer?.floatChannelData![0], count:Int(buffer!.frameLength)))
         
-        let result = snowboy.runDetection(array, length: Int32(buffer.frameLength))
+        let result = snowboy.runDetection(array, length: Int32(buffer!.frameLength))
         print("Snowboy result: \(result)")
         
         // Wake word matches
@@ -253,7 +258,7 @@ class AlexaViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecor
         }
     }
     
-    func checkAudioMetering() {
+    @objc func checkAudioMetering() {
         
         audioRecorder.updateMeters()
         let power = audioRecorder.averagePower(forChannel: 0)

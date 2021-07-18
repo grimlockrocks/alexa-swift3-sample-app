@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>APIKey</key>
-	<string></string>
+	<string>eyJhbGciOiJSU0EtU0hBMjU2IiwidmVyIjoiMSJ9.eyJ2ZXIiOiIzIiwiZW5kcG9pbnRzIjp7ImF1dGh6IjoiaHR0cHM6Ly93d3cuYW1hem9uLmNvbS9hcC9vYSIsInRva2VuRXhjaGFuZ2UiOiJodHRwczovL2FwaS5hbWF6b24uY29tL2F1dGgvbzIvdG9rZW4ifSwiY2xpZW50SWQiOiJhbXpuMS5hcHBsaWNhdGlvbi1vYTItY2xpZW50LjMwYmRkZWViNDM1ODRmMTViNmQ4N2ZlYzA0NjBiMjU0IiwiYXBwRmFtaWx5SWQiOiJhbXpuMS5hcHBsaWNhdGlvbi5mYThhOTIyZjI0ZjE0Nzc1YmE0MzU5YWNjYmY4NDU3MyIsImJ1bmRsZVNlZWRJZCI6Im15bWFudS5kZW1vYWxleGEiLCJidW5kbGVJZCI6Im15bWFudS5kZW1vYWxleGEiLCJpc3MiOiJBbWF6b24iLCJ0eXBlIjoiQVBJS2V5IiwiYXBwVmFyaWFudElkIjoiYW16bjEuYXBwbGljYXRpb24tY2xpZW50LjVlMDdmZGQ4YTA1NTRmOTY5ZmVhNjA1YTUwZWRkZWE4IiwidHJ1c3RQb29sIjpudWxsLCJhcHBJZCI6ImFtem4xLmFwcGxpY2F0aW9uLWNsaWVudC41ZTA3ZmRkOGEwNTU0Zjk2OWZlYTYwNWE1MGVkZGVhOCIsImlkIjoiNWNhZGQwZGUtY2EyMS00OThkLWJmMWMtYjUyNDQ4NzhhYWUwIiwiaWF0IjoiMTYyNjU5MjA4NzY4NCJ9.Uv8MLBuhdmZQ/N0/vFzGFBSmrqSSx7ZORD+kOqNXPmASsipwEr1493qcDifPavcIIpc0LA4VDULI5VAbxEdMTlli6VtnSsN2Z93N3MFTtCkfc9DuzluN/dhHVH+WrNOpVgCANynwxoMn0N77aP741hsIvxWOU8+RXToglqPEMLjCoM2AtiDaC9oq93GtGjMqK7CChqA2IAVcd6egcVcBgIY/Jwe1/jD0grC23ePkPrWDMzMEmNwseJ4thTqiEDEkoGHUHPbii07weYcjJ+QBygCVcrigh0cGlYoUfBTAQ2/hyuVsQ7Y36/oFOBsv1wsL1fmm+v/FYmrgD/SjJgK4xg==</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
@@ -24,10 +24,10 @@
 	<array>
 		<dict>
 			<key>CFBundleURLName</key>
-			<string>bisheng.AlexaiOSApp</string>
+			<string>mymanu.demoalexa</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>amzn-bisheng.AlexaiOSApp</string>
+				<string>amzn-mymanu.demoalexa</string>
 			</array>
 		</dict>
 	</array>
