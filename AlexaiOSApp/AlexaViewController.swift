@@ -100,7 +100,7 @@ class AlexaViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecor
             let directory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
             let fileURL = directory.appendingPathComponent(Settings.Audio.TEMP_FILE_NAME)
             try audioRecorder = AVAudioRecorder(url: fileURL, settings: Settings.Audio.RECORDING_SETTING as [String : AnyObject])
-            try audioSession.setCategory(AVAudioSessionCategoryPlayAndRecord, with:[AVAudioSessionCategoryOptions.allowBluetooth, AVAudioSessionCategoryOptions.allowBluetoothA2DP])
+            try audioSession.setCategory(AVAudioSession.Category.playAndRecord, options:[AVAudioSession.CategoryOptions.allowBluetooth, AVAudioSession.CategoryOptions.allowBluetoothA2DP])
         } catch let ex {
             print("Audio session has an error: \(ex.localizedDescription)")
         }
@@ -112,7 +112,7 @@ class AlexaViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecor
             let directory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
             snowboyTempSoundFileURL = directory.appendingPathComponent(Settings.WakeWord.TEMP_FILE_NAME)
             try audioRecorder = AVAudioRecorder(url: snowboyTempSoundFileURL, settings: Settings.Audio.RECORDING_SETTING as [String : AnyObject])
-            try audioSession.setCategory(AVAudioSessionCategoryPlayAndRecord)
+            try audioSession.setCategory(AVAudioSession.Category.playAndRecord)
             audioRecorder.delegate = self
         } catch let ex {
             print("Audio session for wake word has an error: \(ex.localizedDescription)")
@@ -171,9 +171,9 @@ class AlexaViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecor
                 do {
                     self.avsClient.sendEvent(namespace: "SpeechSynthesizer", name: "SpeechStarted", token: self.speakToken!)
                     
-                    try audioSession.setCategory(AVAudioSessionCategoryPlayAndRecord, with:[AVAudioSessionCategoryOptions.allowBluetooth, AVAudioSessionCategoryOptions.allowBluetoothA2DP])
+                    try audioSession.setCategory(AVAudioSession.Category.playAndRecord, options:[AVAudioSession.CategoryOptions.allowBluetooth, AVAudioSession.CategoryOptions.allowBluetoothA2DP])
                     do {
-                        try audioSession.overrideOutputAudioPort(AVAudioSessionPortOverride.speaker)
+                        try audioSession.overrideOutputAudioPort(AVAudioSession.PortOverride.speaker)
                     } catch let error as NSError {
                         print("audioSession error: \(error.localizedDescription)")
                     }
