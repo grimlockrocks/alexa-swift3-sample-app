@@ -25,3 +25,6 @@ class LoginWithAmazonProxy {
         AIMobileLib.getAccessToken(forScopes: Settings.Credentials.SCOPES, withOverrideParams: nil, delegate: delegate)
     }
 }
+
+
+

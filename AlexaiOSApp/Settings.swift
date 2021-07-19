@@ -12,7 +12,7 @@ import AVFoundation
 struct Settings {
     
     struct Credentials {
-        static let APPLICATION_TYPE_ID = "alexa_ios_sample_app"
+        static let APPLICATION_TYPE_ID = "MYMANU_DEMO_ALEXA"
         static let DSN = "12345"
         
         static let SCOPES = ["alexa:all"]

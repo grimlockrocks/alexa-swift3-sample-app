@@ -45,7 +45,7 @@ class AlexaVoiceServiceClient : NSObject, URLSessionDelegate, URLSessionDataDele
         print("AVS Session created")
     }
     
-    func ping() {
+    @objc func ping() {
         
         var request = URLRequest(url: URL(string: PING_ENDPOINT)!)
         request.httpMethod = "GET"
@@ -288,6 +288,6 @@ class AlexaVoiceServiceClient : NSObject, URLSessionDelegate, URLSessionDataDele
         let firstBracket = dataString.range(of: "{")!
         let lastBracket = dataString.range(of: "}", options: .backwards)!
         let jsonString = dataString[firstBracket.lowerBound...lastBracket.upperBound]
-        self.downchannelHandler?(jsonString)
+        self.downchannelHandler?(String(jsonString))
     }
 }
